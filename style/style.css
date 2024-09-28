@@ -1,0 +1,243 @@
+body {
+
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh;
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    border-bottom: 2px solid #ccc;
+    background-color: #ffffff;
+}
+
+#uva {
+    width: max(10rem, 18vw);  /* Maintain flexible width */
+    height: auto;
+    aspect-ratio: 35 / 4;
+    object-fit: contain;
+    padding: 0.4rem;
+}
+  
+  h1 {
+    color: #0a0a23;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+  }
+nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+  }
+nav > ul > li {
+    color: #0a0a23;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+  }
+  
+  nav > ul > li:hover {
+    background-color: #0a0a23;
+    color: #dfdfe2;
+    cursor: pointer;
+  }
+  li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    margin-top: 50px; /* Adjust based on header height */
+}
+
+.sidebar {
+    position: fixed; /* Fixed to the left */
+    top: 80px; /* Adjust as needed based on your header height */
+    left: 20px; /* Space from the left */
+
+    padding: 15px; /* Padding inside the sidebar */
+    width: 200px; /* Width of the sidebar */
+  }
+  .sidebar h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    color: #0a0a23; /* Change heading color */
+    font-size: 1.5em; /* Size of the heading */
+  }
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    display: flex; /* Use flexbox to align icons and text */
+    align-items: center; /* Center icons vertically */
+    margin: 10px 0;
+}
+
+.sidebar ul li i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #0a0a23; /* Icon color */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #0a0a23; /* Link color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+  .sidebar ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+main {
+    margin: 20px auto; /* Adjust based on the sidebar width */
+    padding: 20px; /* Optional padding for main content */
+    max-width: 800px; /* Set a maximum width for better readability */
+    flex-grow: 1;
+}
+  .introduction {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image img {
+    width: 250px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 50%; /* Make the image circular */
+}
+
+.intro-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    color: #333;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.intro-text h3 {
+    font-size: 1.2em;
+    color: #666;
+    font-weight: 400;
+    margin: 5px 0;
+    letter-spacing: 1px;
+
+}
+
+.intro-text p {
+    margin-top: 20px; /* Add some space between the paragraph and headers */
+    line-height: 1.5;
+}
+
+
+.section {
+    margin: 30px;
+    
+  }
+  
+  .section {
+    margin: 30px; /* Space between sections */
+}
+
+.research-item, .project-item, .work-item {
+    display: flex; /* Use flexbox to align items side by side */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space between items */
+}
+
+.research-item img, .project-item img, .work-itm img {
+    width: 100px; /* Adjust width for project/research images */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack h5 and p vertically */
+}
+
+h4 {
+    color: #0a0a23;
+    font-size: 1.5em; /* Heading size for sections */
+    margin-bottom: 10px; /* Space below section headings */
+    border-bottom: 2px solid #0a0a23;
+}
+
+h5 {
+    color: #0a0a23;
+    font-size: 1.2em; /* Subheading size */
+    margin: 5px 0; /* Space above and below h5 */
+}
+
+p {
+    font-size: 1em; /* Text size for paragraph */
+    line-height: 1.5; /* Improve readability */
+    margin: 5px 0; /* Space above and below paragraphs */
+}
+
+footer {
+    background-color: #f5f6f7; /* Light background color */
+    color: #1b1b32; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Padding around the footer */
+    bottom: 0; /* Stick to the bottom of the page */
+    width: 100%; /* Full width */
+  }
+  
+  .footer-content {
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center content */
+  }
+  
+  .social-links {
+    margin-top: 10px; /* Space above links */
+  }
+  
+  .social-links a {
+    margin: 0 15px; /* Space between links */
+    color: #0a0a23; /* Link color */
+    text-decoration: none; /* No underline */
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
